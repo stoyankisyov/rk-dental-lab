@@ -312,7 +312,7 @@ a {
   opacity: 0.5;
   pointer-events: none;
   z-index: 0;
-  filter: blur(2px);
+  filter: none;
   mask-image: radial-gradient(circle at center, black 55%, transparent 85%);
   -webkit-mask-image: radial-gradient(circle at center, black 55%, transparent 85%);
 }
