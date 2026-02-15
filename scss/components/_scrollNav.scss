@@ -1,0 +1,184 @@
+.scrollNav {
+  position: fixed;
+  right: clamp(12px, 2vw, 18px);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 65;
+  pointer-events: none;
+}
+
+.scrollNav__inner {
+  display: grid;
+  gap: 10px;
+  align-items: center;
+  justify-items: end;
+  pointer-events: auto;
+}
+
+.scrollNav__item {
+  position: relative;
+  width: 260px;
+  height: 28px;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+
+  opacity: 0.72;
+  transition:
+    opacity 220ms ease,
+    transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.scrollNav__item:hover {
+  opacity: 0.95;
+  transform: translate3d(-2px, 0, 0);
+}
+
+.scrollNav__dot {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.07);
+
+  transition:
+    transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.scrollNav__text {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translate3d(10px, -50%, 0);
+
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  pointer-events: none;
+
+  font-weight: 850;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.86);
+
+  padding: 10px 0;
+  border-radius: 999px;
+
+  transition:
+    max-width 360ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 220ms ease,
+    transform 360ms cubic-bezier(0.22, 1, 0.36, 1),
+    padding 360ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.scrollNav__item.is-active {
+  opacity: 1;
+}
+
+.scrollNav__item.is-active .scrollNav__dot {
+  transform: translate3d(0, -50%, 0) scale(1.15);
+  background: rgba(62, 143, 255, 0.26);
+  border-color: rgba(62, 143, 255, 0.62);
+  box-shadow: 0 0 0 4px rgba(62, 143, 255, 0.1);
+}
+
+.scrollNav__item.is-active .scrollNav__text {
+  max-width: 240px;
+  opacity: 1;
+  transform: translate3d(0, -50%, 0);
+  padding: 10px 14px;
+
+  background: rgba(17, 20, 23, 0.34);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(62, 143, 255, 0.62);
+  box-shadow:
+    0 14px 40px rgba(0, 0, 0, 0.32),
+    0 0 0 1px rgba(62, 143, 255, 0.1) inset;
+}
+
+.scrollNav__tip {
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  transform: translate3d(8px, -50%, 0);
+
+  opacity: 0;
+  pointer-events: none;
+
+  max-width: 220px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  padding: 10px 12px;
+  border-radius: 999px;
+
+  background: rgba(17, 20, 23, 0.44);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.82);
+
+  font-weight: 850;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+
+  box-shadow:
+    0 14px 40px rgba(0, 0, 0, 0.32),
+    0 0 0 1px rgba(62, 143, 255, 0.1) inset;
+
+  transition:
+    opacity 180ms ease,
+    transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.scrollNav__tip::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  transform: translateY(-50%) rotate(45deg);
+
+  background: rgba(17, 20, 23, 0.44);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.scrollNav__item:not(.is-active):hover .scrollNav__tip,
+.scrollNav__item:not(.is-active):focus-visible .scrollNav__tip {
+  opacity: 1;
+  transform: translate3d(0, -50%, 0);
+}
+
+@media (max-width: 899px) {
+  .scrollNav {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scrollNav__item,
+  .scrollNav__dot,
+  .scrollNav__text,
+  .scrollNav__tip {
+    transition: none;
+  }
+}

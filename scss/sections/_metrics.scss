@@ -1,0 +1,40 @@
+.metrics {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+@media (min-width: 860px) {
+  .metrics {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+}
+
+.metric {
+  position: relative;
+  padding-left: 14px;
+}
+
+.metric::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 2px;
+  background: rgba(62, 143, 255, 0.35);
+}
+
+.metric__big {
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  font-size: clamp(1.25rem, 0.9vw + 1rem, 1.55rem);
+}
+
+.metric__small {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: var(--small);
+}

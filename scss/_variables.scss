@@ -1,0 +1,30 @@
+:root {
+  --bg: #111417;
+
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.62);
+  --faint: rgba(255, 255, 255, 0.4);
+
+  --accent: #3e8fff;
+  --accentSoft: rgba(62, 143, 255, 0.18);
+
+  /* layout */
+  --container: 1200px;
+  --mainW: 860px;
+
+  /* responsive horizontal padding */
+  --pad: clamp(16px, 3.2vw, 32px);
+
+  /* type scale */
+  --h1: clamp(2.15rem, 4.8vw, 5.2rem);
+  --h2: clamp(1.85rem, 3.4vw, 3.6rem);
+
+  --p: clamp(1.0rem, 0.55vw + 0.9rem, 1.1rem);
+  --small: clamp(0.9rem, 0.35vw + 0.82rem, 1.0rem);
+
+  /* rhythm */
+  --radius-lg: 24px;
+  --radius-md: 18px;
+  --shadow-lg: 0 18px 52px rgba(0, 0, 0, 0.22);
+  --shadow-md: 0 12px 34px rgba(0, 0, 0, 0.22);
+}

@@ -1,39 +1,65 @@
-<!-- index.html -->
 <!doctype html>
 <html lang="bg">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>RK Dental Lab</title>
+
+    <meta
+      name="description"
+      content="Зъботехническа лаборатория в Пловдив. Цирконий, металокерамика, фасети и работа върху импланти. Работа с клиники в страната чрез куриер."
+    />
+    <title>Kisyov Dent</title>
+
+    <link rel="canonical" href="https://kisyovdent.bg/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kisyov Dent" />
+    <meta
+      property="og:description"
+      content="Зъботехническа лаборатория в Пловдив. Работа с клиники в страната чрез куриер."
+    />
+    <meta property="og:url" content="https://kisyovdent.bg/" />
+
     <link rel="icon" href="./assets/logo.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Kisyov Dent",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Plovdiv",
+          "addressCountry": "BG"
+        },
+        "telephone": "+359887859765",
+        "email": "kisyovdent@gmail.com",
+        "url": "https://kisyovdent.bg/",
+        "sameAs": ["https://www.instagram.com/kisyovdent"]
+      }
+    </script>
+
+    <script type="module" src="./js/main.js" defer></script>
   </head>
 
   <body>
     <div class="site">
-      <!-- Brand dock (always visible) -->
-      <a
-        class="brandDock"
-        href="#"
-        data-target="hero"
-        aria-label="Име на лабораторията"
-      >
+      <a class="brandDock" href="#" data-target="hero" aria-label="Kisyov Dent">
         <img
           class="brandDock__logo brandDock__logo--accent"
           src="./assets/logo.svg"
           alt=""
           aria-hidden="true"
         />
-        <div class="brandDock__name">RK DENTAL LAB</div>
+        <div class="brandDock__name">KISYOV DENT</div>
       </a>
 
-      <!-- Dots navigation (active dot becomes a labeled pill) -->
       <nav class="scrollNav" aria-label="Навигация по секции">
-        <div class="scrollNav__inner" id="railDots" aria-hidden="false"></div>
+        <div class="scrollNav__inner" id="railDots"></div>
       </nav>
 
       <main class="page" id="top">
-        <!-- HERO -->
         <section class="hero section" id="hero" data-rail-label="Начало">
           <div class="container hero__grid hero__grid--stack">
             <div class="hero__copy hero__copy--watermark">
@@ -69,7 +95,6 @@
           </div>
         </section>
 
-        <!-- ABOUT -->
         <section
           class="chapter section"
           id="about-us"
@@ -82,7 +107,7 @@
               </h2>
 
               <p class="chapter__text reveal">
-                RK Dental Lab е самостоятелна зъботехническа лаборатория с над 30
+                Kisyov Dent е самостоятелна зъботехническа лаборатория с над 30
                 години практика. Всеки случай се изработва от един зъботехник —
                 от планирането до финалния контрол. Това означава
                 последователност, яснота и отговорност за резултата.
@@ -108,8 +133,11 @@
           </div>
         </section>
 
-        <!-- BENEFITS -->
-        <section class="chapter section" id="benefits" data-rail-label="За клиниката">
+        <section
+          class="chapter section"
+          id="benefits"
+          data-rail-label="За клиниката"
+        >
           <div class="container chapter__grid">
             <div class="chapter__main">
               <h2 class="chapter__title reveal slideTitle">
@@ -125,20 +153,23 @@
                 <article class="serviceCard reveal">
                   <h3>По-малко корекции</h3>
                   <p>
-                    Контрол при изработката, за да става бързо и спокойно в кабинета.
+                    Контрол при изработката, за да става бързо и спокойно в
+                    кабинета.
                   </p>
                 </article>
 
                 <article class="serviceCard reveal">
                   <h3>Подкрепа</h3>
-                  <p>Насреща сме при нужда от насока, уточнение или бърза реакция.</p>
+                  <p>
+                    Насреща сме при нужда от насока, уточнение или бърза
+                    реакция.
+                  </p>
                 </article>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- PARTNERSHIP -->
         <section
           class="chapter section"
           id="partnership"
@@ -153,51 +184,50 @@
               <div class="serviceGrid">
                 <article class="serviceCard reveal">
                   <h3>Уточняване по случая</h3>
-                  <p>
-                    При прием уточняваме материал, нюанс и приоритет. Целта е да няма
-                    изненади по време на изработката.
-                  </p>
+                  <p>При прием уточняваме материал, нюанс и приоритет.</p>
                 </article>
 
                 <article class="serviceCard reveal">
                   <h3>Срокове</h3>
                   <p>
-                    Стандартно: 5–7 работни дни. Естетични случаи: 7–10 работни дни.
-                    При комплексни конструкции срокът се уточнява предварително.
+                    Стандартно: 5–7 работни дни. Естетични случаи: 7–10 работни
+                    дни. При комплексни конструкции срокът се уточнява
+                    предварително.
                   </p>
                 </article>
 
                 <article class="serviceCard reveal">
                   <h3>Доставка</h3>
-                  <p>
-                    Изпращане с куриер до цялата страна. Организираме логистиката така,
-                    че да не забавя процеса.
-                  </p>
+                  <p>Изпращане с куриер до цялата страна.</p>
                 </article>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- CASES -->
-        <section class="chapter chapter--muted section" id="cases" data-rail-label="Случаи">
+        <section
+          class="chapter chapter--muted section"
+          id="cases"
+          data-rail-label="Случаи"
+        >
           <div class="container chapter__grid">
             <div class="chapter__main">
               <h2 class="chapter__title reveal slideTitle">Подбрани работи</h2>
 
               <div class="cases">
-                <!-- CASE 1 -->
                 <article class="case reveal">
                   <h3 class="case__title">
-                    Циркониева конструкция – горни централни и латерални резци (12–22)
+                    Циркониева конструкция – горни централни и латерални резци
+                    (12–22)
                   </h3>
 
                   <p class="case__text">
-                    Изработка на фронтална циркониева конструкция върху четирите горни
-                    резеца с внимание към пропорциите, линията на усмивката и естествения
-                    преход към гингивата. Формата и контурите са съобразени така, че да
-                    осигурят стабилни контакти и хармонична позиция във фронта.
-                    Инцизалните ръбове са моделирани с лека текстура и дълбочина.
+                    Изработка на фронтална циркониева конструкция върху четирите
+                    горни резеца с внимание към пропорциите, линията на
+                    усмивката и естествения преход към гингивата. Формата и
+                    контурите са съобразени така, че да осигурят стабилни
+                    контакти и хармонична позиция във фронта. Инцизалните ръбове
+                    са моделирани с лека текстура и дълбочина.
                   </p>
 
                   <div class="case__media">
@@ -218,18 +248,19 @@
                   </div>
                 </article>
 
-                <!-- CASE 2 -->
                 <article class="case reveal">
-                  <h3 class="case__title">Послойна керамика – естетична работа върху 12–22</h3>
+                  <h3 class="case__title">
+                    Послойна керамика – естетична работа върху 12–22
+                  </h3>
 
                   <p class="case__text">
-                    Послойна керамика върху горните централни и латерални резци с акцент
-                    върху балансирана форма и естествено вписване във фронта.
-                    Конструкцията е изградена с плавни контури и умерена
-                    транслуцентност, така че да се запази стабилна и спокойна естетика
-                    без прекалена яркост. Гингивалната част е оформена с внимание към
-                    анатомичния преход и меките тъкани, а инцизалните ръбове са
-                    моделирани чисто и симетрично.
+                    Послойна керамика върху горните централни и латерални резци
+                    с акцент върху балансирана форма и естествено вписване във
+                    фронта. Конструкцията е изградена с плавни контури и умерена
+                    транслуцентност, така че да се запази стабилна и спокойна
+                    естетика без прекалена яркост. Гингивалната част е оформена
+                    с внимание към анатомичния преход и меките тъкани, а
+                    инцизалните ръбове са моделирани чисто и симетрично.
                   </p>
 
                   <div class="case__media">
@@ -254,11 +285,12 @@
           </div>
         </section>
 
-        <!-- SERVICES -->
         <section class="chapter section" id="services" data-rail-label="Услуги">
           <div class="container chapter__grid">
             <div class="chapter__main">
-              <h2 class="chapter__title reveal slideTitle">Основни направления</h2>
+              <h2 class="chapter__title reveal slideTitle">
+                Основни направления
+              </h2>
 
               <div class="servicesList">
                 <div class="serviceItem reveal">
@@ -285,7 +317,9 @@
                   <span class="serviceItem__n">05</span>
                   <div class="serviceItem__stack">
                     <h3>Други конструкции</h3>
-                    <div class="serviceItem__note">по предварително запитване</div>
+                    <div class="serviceItem__note">
+                      по предварително запитване
+                    </div>
                   </div>
                 </div>
               </div>
@@ -293,20 +327,23 @@
           </div>
         </section>
 
-        <!-- CONTACT -->
-        <section class="chapter chapter--final section" id="contact" data-rail-label="Контакт">
+        <section
+          class="chapter chapter--final section"
+          id="contact"
+          data-rail-label="Контакт"
+        >
           <div class="container final">
             <h2 class="final__title reveal">Контакти</h2>
             <p class="final__text reveal">
-              Изпрати ни запитване с типа конструкция, броя елементи и желан срок — ще
-              отговорим с конкретика.
+              Изпрати ни запитване с типа конструкция, броя елементи и желан
+              срок — ще отговорим с конкретика.
             </p>
 
             <div class="final__card reveal">
               <div class="row">
                 <span class="row__k">Имейл</span>
-                <a class="row__v" href="mailto:rumen.kisyov.dental.lab@gmail.com"
-                  >rumen.kisyov.dental.lab@gmail.com</a
+                <a class="row__v" href="mailto:kisyovdent@gmail.com"
+                  >kisyovdent@gmail.com</a
                 >
               </div>
 
@@ -324,10 +361,10 @@
                 <span class="row__k">Инстаграм</span>
                 <a
                   class="row__v"
-                  href="https://www.instagram.com/rumen.kisyov.dental.lab"
+                  href="https://www.instagram.com/kisyovdent"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >@rumen.kisyov.dental.lab</a
+                  >@kisyovdent</a
                 >
               </div>
 
@@ -339,274 +376,9 @@
         </section>
       </main>
 
-      <footer class="siteFooter">© <span id="year"></span> RK Dental Lab</footer>
-
-      <script>
-        (function () {
-          // year
-          var yearEl = document.getElementById('year');
-          if (yearEl) {
-            yearEl.textContent = String(new Date().getFullYear());
-          }
-
-          var prefersReducedMotion =
-            window.matchMedia &&
-            window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-          // -------------------------
-          // Reveal animations (reversible)
-          // -------------------------
-          var reveals = Array.prototype.slice.call(
-            document.querySelectorAll('.reveal'),
-          );
-
-          if (!prefersReducedMotion) {
-            var sections = Array.prototype.slice.call(
-              document.querySelectorAll('main.page > section'),
-            );
-
-            sections.forEach(function (sec) {
-              var items = sec.querySelectorAll('.reveal');
-              var i = 0;
-              items.forEach(function (el) {
-                el.style.setProperty('--d', String(Math.min(i, 8) * 70) + 'ms');
-                i += 1;
-              });
-            });
-          }
-
-          if (prefersReducedMotion) {
-            reveals.forEach(function (el) {
-              el.classList.add('is-visible');
-            });
-          } else if (!('IntersectionObserver' in window)) {
-            reveals.forEach(function (el) {
-              el.classList.add('is-visible');
-            });
-          } else {
-            var io = new IntersectionObserver(
-              function (entries) {
-                entries.forEach(function (entry) {
-                  if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                  } else {
-                    entry.target.classList.remove('is-visible');
-                  }
-                });
-              },
-              { threshold: 0.14, rootMargin: '0px 0px -12% 0px' },
-            );
-
-            reveals.forEach(function (el) {
-              io.observe(el);
-            });
-          }
-
-          // -------------------------
-          // ScrollNav (dots + active label pill)
-          // -------------------------
-          var railDots = document.getElementById('railDots');
-
-          var railSections = Array.prototype.slice
-            .call(document.querySelectorAll('main.page > section'))
-            .filter(function (s) {
-              return Boolean(s.id);
-            });
-
-          function scrollToSection(id) {
-            var el = document.getElementById(id);
-            if (!el) {
-              return;
-            }
-
-            // Center the SECTION in the viewport (Y axis)
-            var rect = el.getBoundingClientRect();
-            var y = window.scrollY + rect.top;
-            var target = y - window.innerHeight / 2 + rect.height / 2;
-
-            // Clamp so we don't overscroll past the document edges
-            var max =
-              document.documentElement.scrollHeight - window.innerHeight;
-            if (target < 0) {
-              target = 0;
-            }
-            if (target > max) {
-              target = max;
-            }
-
-            window.scrollTo({
-              top: target,
-              behavior: prefersReducedMotion ? 'auto' : 'smooth',
-            });
-          }
-
-          // -------------------------
-          // Use data-target navigation (no URL hash)
-          // -------------------------
-          function wireDataTargetLinks() {
-            var links = Array.prototype.slice.call(
-              document.querySelectorAll('[data-target]'),
-            );
-
-            links.forEach(function (a) {
-              a.addEventListener('click', function (e) {
-                e.preventDefault();
-                var id = a.getAttribute('data-target');
-                if (!id) {
-                  return;
-                }
-                scrollToSection(id);
-
-                // keep URL clean
-                history.replaceState(
-                  null,
-                  '',
-                  window.location.pathname + window.location.search,
-                );
-              });
-            });
-          }
-
-          wireDataTargetLinks();
-
-          function setActiveDot() {
-            if (!railDots) {
-              return;
-            }
-
-            var mid = window.innerHeight * 0.5;
-            var activeId = null;
-
-            for (var i = 0; i < railSections.length; i += 1) {
-              var r = railSections[i].getBoundingClientRect();
-              if (r.top <= mid && r.bottom >= mid) {
-                activeId = railSections[i].id;
-                break;
-              }
-            }
-
-            var items = railDots.querySelectorAll('.scrollNav__item');
-            items.forEach(function (it) {
-              var isActive = it.getAttribute('data-target') === activeId;
-              it.classList.toggle('is-active', isActive);
-              it.setAttribute('aria-current', isActive ? 'true' : 'false');
-            });
-          }
-
-          function buildDots() {
-            if (!railDots) {
-              return;
-            }
-
-            railDots.innerHTML = '';
-
-            railSections.forEach(function (s, idx) {
-              var label = s.getAttribute('data-rail-label') || s.id;
-
-              var btn = document.createElement('button');
-              btn.type = 'button';
-              btn.className = 'scrollNav__item';
-              btn.setAttribute('data-target', s.id);
-              btn.setAttribute('aria-label', label);
-
-              // dot
-              var dot = document.createElement('span');
-              dot.className = 'scrollNav__dot';
-              dot.setAttribute('aria-hidden', 'true');
-
-              // label (only visible when active)
-              var text = document.createElement('span');
-              text.className = 'scrollNav__text';
-              text.textContent = label;
-
-              // tooltip (visible on hover/focus for non-active)
-              var tip = document.createElement('span');
-              tip.className = 'scrollNav__tip';
-              tip.textContent = label;
-              tip.setAttribute('aria-hidden', 'true');
-
-              btn.appendChild(dot);
-              btn.appendChild(text);
-              btn.appendChild(tip);
-
-              btn.addEventListener('click', function () {
-                scrollToSection(s.id);
-
-                // keep URL clean
-                history.replaceState(
-                  null,
-                  '',
-                  window.location.pathname + window.location.search,
-                );
-              });
-
-              railDots.appendChild(btn);
-
-              if (idx === 0) {
-                btn.classList.add('is-start');
-              }
-            });
-          }
-
-          buildDots();
-
-          // -------------------------
-          // Title drift on scroll
-          // -------------------------
-          var slideTitles = Array.prototype.slice.call(
-            document.querySelectorAll('.slideTitle'),
-          );
-
-          function updateTitleSlides() {
-            if (prefersReducedMotion) {
-              return;
-            }
-
-            var vh = Math.max(1, window.innerHeight);
-            slideTitles.forEach(function (el) {
-              var r = el.getBoundingClientRect();
-              var t = (vh * 0.55 - r.top) / (vh * 0.8);
-              t = Math.max(0, Math.min(1, t));
-
-              var k = (t - 0.5) * 2;
-              var px = k * 22;
-
-              el.style.setProperty('--sx', px.toFixed(2) + 'px');
-            });
-          }
-
-          var rafPending = false;
-          function onScroll() {
-            if (rafPending) {
-              return;
-            }
-            rafPending = true;
-            window.requestAnimationFrame(function () {
-              rafPending = false;
-              setActiveDot();
-              updateTitleSlides();
-            });
-          }
-
-          window.addEventListener('scroll', onScroll, { passive: true });
-          window.addEventListener(
-            'resize',
-            function () {
-              setActiveDot();
-              updateTitleSlides();
-            },
-            { passive: true },
-          );
-
-          setActiveDot();
-          updateTitleSlides();
-
-          window.addEventListener('load', function () {
-            setActiveDot();
-            updateTitleSlides();
-          });
-        })();
-      </script>
+      <footer class="siteFooter">
+        © <span id="year"></span> Kisyov Dent. Всички права запазени.
+      </footer>
     </div>
   </body>
 </html>

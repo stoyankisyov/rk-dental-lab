@@ -1,0 +1,115 @@
+.hero {
+  min-height: 100svh;
+  padding: 0;
+  display: grid;
+  align-items: center;
+  position: relative;
+}
+
+.hero .container {
+  padding-top: clamp(120px, 16vh, 220px);
+  padding-bottom: clamp(72px, 10vh, 160px);
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(28px, 4vw, 54px);
+  align-items: start;
+}
+
+.hero__copy {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__copy--watermark {
+  position: relative;
+}
+
+.kicker {
+  margin: 0 0 16px 0;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: var(--small);
+}
+
+.hero__title {
+  margin: 0;
+  font-size: var(--h1);
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+  max-width: 22ch;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.hero__subtitle {
+  margin: 16px 0 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 70ch;
+  font-size: var(--p);
+}
+
+.hero__actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.hero__mark {
+  position: absolute;
+  left: 50%;
+  top: calc(50% + 90px); /* back to your original placement */
+  transform: translate(-50%, -50%);
+
+  /* Desktop: restore the “big watermark” look */
+  width: 90vw;
+  max-width: none;
+
+  height: auto;
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 0;
+
+  mask-image: radial-gradient(circle at center, black 55%, transparent 85%);
+  -webkit-mask-image: radial-gradient(
+    circle at center,
+    black 55%,
+    transparent 85%
+  );
+}
+
+/* Mobile refinement */
+@media (max-width: 768px) {
+  .hero__mark {
+    top: 70%;                 /* push lower */
+    width: 170vw;             /* zoom in */
+    opacity: 0.32;            /* reduce noise */
+    
+    transform: translate(-50%, -50%) scale(1.15);
+    
+    mask-image: radial-gradient(
+      circle at center,
+      black 50%,
+      transparent 85%
+    );
+    -webkit-mask-image: radial-gradient(
+      circle at center,
+      black 50%,
+      transparent 85%
+    );
+  }
+}
+
+/* Optional: on very large monitors, avoid it becoming absurdly huge */
+@media (min-width: 1600px) {
+  .hero__mark {
+    width: 1400px; /* cap only on ultra-wide screens */
+    max-width: none;
+  }
+}
