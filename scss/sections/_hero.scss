@@ -64,13 +64,10 @@
 .hero__mark {
   position: absolute;
   left: 50%;
-  top: calc(50% + 90px); /* back to your original placement */
+  top: calc(50% + 90px);
   transform: translate(-50%, -50%);
-
-  /* Desktop: restore the “big watermark” look */
   width: 90vw;
   max-width: none;
-
   height: auto;
   opacity: 0.55;
   pointer-events: none;
@@ -84,20 +81,22 @@
   );
 }
 
+/* make the image inside picture behave like your old <img> */
+.hero__mark > img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Mobile refinement */
 @media (max-width: 768px) {
   .hero__mark {
-    top: 70%;                 /* push lower */
-    width: 170vw;             /* zoom in */
-    opacity: 0.32;            /* reduce noise */
-    
+    top: 70%;
+    width: 170vw;
+    opacity: 0.32;
     transform: translate(-50%, -50%) scale(1.15);
-    
-    mask-image: radial-gradient(
-      circle at center,
-      black 50%,
-      transparent 85%
-    );
+
+    mask-image: radial-gradient(circle at center, black 50%, transparent 85%);
     -webkit-mask-image: radial-gradient(
       circle at center,
       black 50%,
@@ -109,7 +108,7 @@
 /* Optional: on very large monitors, avoid it becoming absurdly huge */
 @media (min-width: 1600px) {
   .hero__mark {
-    width: 1400px; /* cap only on ultra-wide screens */
+    width: 1400px;
     max-width: none;
   }
 }
